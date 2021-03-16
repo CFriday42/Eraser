@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "eraser2",
+  "version": "0.13",
+  "browser_action": {
+    "default_popup": "./popup.html",
+    "default_title": "On/Off Button",
+    "default_icon": "./eraser.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "ccs": ["stylesheet.css"],
+      "js": ["jquery-3.5.1.min.js", "popup.js", "index.js"]
+    }
+  ],
+  "permissions": [ "tabs" ]
+}
